@@ -114,7 +114,7 @@ public class Bot extends TelegramLongPollingBot {
   }
 
   public synchronized void sendSpecifiedText(String chatId, String text){
-    sendSpecifiedText(chatId, text, false);
+    sendSpecifiedText(chatId, text, true);
   }
 
   public synchronized void sendSpecifiedText(String chatId, String text, boolean addButtons) {
