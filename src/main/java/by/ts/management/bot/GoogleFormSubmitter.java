@@ -1,4 +1,4 @@
-package by.losika.ts;
+package by.ts.management.bot;
 
 import java.io.IOException;
 import java.util.ArrayList;

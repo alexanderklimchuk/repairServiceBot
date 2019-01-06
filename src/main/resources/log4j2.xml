@@ -2,7 +2,7 @@
 <Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
 
   <Appenders>
-    <File name="FILE" fileName="logfile.log" append="true">
+    <File name="FILE" fileName="/tmp/ts-bot-2.0.log" append="true">
       <PatternLayout pattern="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n"/>
     </File>
     <Console name="STDOUT" target="SYSTEM_OUT">
@@ -11,7 +11,7 @@
   </Appenders>
 
   <Loggers>
-    <Logger name="by.losika.ts" level="debug"/>
+    <Logger name="by.ts.management" level="debug"/>
 
     <Root level="info">
       <AppenderRef ref="STDOUT"/>

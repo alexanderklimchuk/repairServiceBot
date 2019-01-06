@@ -1,4 +1,4 @@
-package by.losika.ts;
+package by.ts.management.bot;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
