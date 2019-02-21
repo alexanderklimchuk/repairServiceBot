@@ -47,13 +47,13 @@ public class Bot extends TelegramLongPollingBot {
 
       if (progress != null) {
         String currentQuestion = progress.get(CURRENT_QUESTION);
-        progress.put(currentQuestion, message);
+        logger.info(new ParameterizedMessage("Response was received: {} from chatId: {}", message, chatId));
 
-        logger.info(
-            new ParameterizedMessage("Response was received: {} from chatId: {}", message, chatId));
+        progress.put(currentQuestion, message);
 
         int currentQuestionIdx = sequenceOfTaskQuestions.indexOf(currentQuestion);
         if (currentQuestionIdx < sequenceOfTaskQuestions.size() - 1) {
+
           progress.put(CURRENT_QUESTION,
               sequenceOfTaskQuestions.get(sequenceOfTaskQuestions.indexOf(currentQuestion) + 1));
           showNewTaskMenu(chatId);
